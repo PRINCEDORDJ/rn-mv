@@ -11,16 +11,16 @@ interface Props {
 const TabNav = ({ focused, title, icon }: Props) => {
   if (focused) {
     return (
-      <View className="flex-col items-center justify-center w-[112px] mt-7 bg-purple-700 h-[63px] rounded-full">
+      <View className="flex-col items-center justify-center w-[100px] mt-8 bg-blue-500 h-[66px] rounded-full">
         <View>{icon}</View>
         <Text className="text-xl text-white font-bold ">{title}</Text>
       </View>
     );
   }
   return (
-    <View className="mt-7">
+    <View className="mt-6 flex-col items-center justify-center w-[112px]">
       <View>{icon}</View>
-      <Text className="text-xl text-white font-bold ">{title}</Text>
+      <Text className="text-sm text-white ">{title}</Text>
     </View>
   );
 };
@@ -31,14 +31,25 @@ export default function TabLayout() {
       screenOptions={{
         tabBarShowLabel: false,
         headerShown: false,
+        tabBarItemStyle: {
+          width: "100%",
+          height: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+          
+        },
         tabBarStyle: {
-          width: "90%",
-          position: "fixed",
           margin: "auto",
+          position: "absolute",
+          height: 64,
           marginBottom: 20,
+          marginHorizontal: 10,
           borderRadius: 50,
           alignItems: "center",
           justifyContent: "center",
+          overflow: "hidden",
+          backgroundColor: "#03288d",
+          borderColor: 'transparent'
         },
       }}
     >
@@ -50,7 +61,7 @@ export default function TabLayout() {
             <TabNav
               focused={focused}
               title="Home"
-              icon={<Home size={30} color={focused ? "white" : "black"} />}
+              icon={<Home size={30} color={focused ? "white" : "white"} />}
             />
           ),
         }}
@@ -63,7 +74,7 @@ export default function TabLayout() {
             <TabNav
               focused={focused}
               title="Search"
-              icon={<Search size={30} color={focused ? "white" : "black"} />}
+              icon={<Search size={30} color={focused ? "white" : "white"} />}
             />
           ),
         }}
@@ -76,7 +87,7 @@ export default function TabLayout() {
             <TabNav
               focused={focused}
               title="Saved"
-              icon={<Bookmark size={30} color={focused ? "white" : "black"} />}
+              icon={<Bookmark size={30} color={focused ? "white" : "white"} />}
             />
           ),
         }}
@@ -89,7 +100,7 @@ export default function TabLayout() {
             <TabNav
               focused={focused}
               title="Settings"
-              icon={<Settings size={30} color={focused ? "white" : "black"} />}
+              icon={<Settings size={30} color={focused ? "white" : "white"} />}
             />
           ),
         }}
