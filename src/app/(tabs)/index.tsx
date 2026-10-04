@@ -31,7 +31,7 @@ export default function HomeLayout() {
           resizeMode="cover"
         />
         <ScrollView
-          className="flex-1 px-5"
+          className="flex-1 px-5 mt-1"
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ minHeight: 100, paddingBottom: 10 }}
         >

@@ -27,16 +27,3 @@ export const fetchMovies = async ({ query }: { query: string }) => {
   return data;
 };
 
-//const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc';
-//const options = {
-//  method: 'GET',
-//  headers: {
-//    accept: 'application/json',
-//    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZmJmMDZjNDg3ZGQzMWZlMzA2ZTM5MzZkZWRhODJlMSIsIm5iZiI6MTc5MDU4Njg3MS41MTEwMDAyLCJzdWIiOiI2YWJhMmZmNzFlMWVlNWMyMjUyMTBhNzUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.haPRX834DwwHuT072-lL9_AGrT_jnacch6YCFfL7x58'
-//  }
-//};
-//
-//fetch(url, options)
-//  .then(res => res.json())
-//  .then(json => console.log(json))
-//  .catch(err => console.error(err));
